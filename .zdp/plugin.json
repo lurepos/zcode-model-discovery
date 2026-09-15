@@ -1,0 +1,27 @@
+{
+  "apiVersion": 1,
+  "id": "model-discovery",
+  "name": "Model Discovery",
+  "version": "1.0.0",
+  "description": "Discovers and autofills model lists from any OpenAI-compatible /v1/models endpoint into ZCode",
+  "entrypoints": {
+    "main": "dist/main.cjs",
+    "renderer": "dist/renderer.js"
+  },
+  "engines": {
+    "host": ">=0.1.0",
+    "zcode": ">=3.3.6"
+  },
+  "capabilities": [
+    "zcode.models.read",
+    "ui.pages",
+    "ui.overlays",
+    "experimental.zcode.rpc"
+  ],
+  "pages": [
+    {
+      "id": "discovery",
+      "title": "Model Discovery"
+    }
+  ]
+}
